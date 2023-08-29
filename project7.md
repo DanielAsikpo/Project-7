@@ -7,9 +7,9 @@ Read about **Network-attached storage (NAS), Storage Area Network (SAN)** and re
 As a member of a DevOps team, you will implement a tooling website solution which makes access to DevOps tools within the corporate infrastructure easily accessible. In this project you will implement a solution that consists of following components:
 
 1. Infrastructure: AWS
-2. Webserver Linux: Three Red Hat Enterprise Linux 8
+2. Webserver Linux: Three Red Hat Enterprise Linux 9
 3. Database Server: One Ubuntu 20.04 + MySQL
-4. Storage Server: One Red Hat Enterprise Linux 8 + NFS Server
+4. Storage Server: One Red Hat Enterprise Linux 9 + NFS Server
 5. Programming Language: PHP
 6. Code Repository: GitHub 
 
@@ -20,7 +20,7 @@ On the diagram below you can see a common pattern where several stateless Web Se
 It is important to know what storage solution is suitable for what use cases, for this – you need to answer the following questions: what data will be stored, in what format, how this data will be accessed, by whom, from where, how frequently, etc. Based on this you will be able to choose the right storage system for your solution.
 
 ## STEP 1 - PREPARE NFS SERVER
-1. Spin up a new EC2 instance with **RHEL Linux 8 Operating System.**
+1. Spin up a new EC2 instance with **RHEL Linux 9 Operating System.**
 2. Based on your LVM experience from the [three-tier architecture project](https://github.com/DanielAsikpo/Project-6), Configure LVM on the Server.
 - Instead of formatting the disks as **ext4,** you will have to format them as **xfs**
 
@@ -125,7 +125,7 @@ During the next steps we will do following:
 - Deploy a Tooling application to our Web Servers into a shared NFS folder
 - Configure the Web Servers to work with a single MySQL database
 
-1. Launch a new EC2 instance with RHEL 8 Operating System
+1. Launch a new EC2 instance with RHEL 9 Operating System
 
 2. Install NFS client `sudo yum install nfs-utils nfs4-acl-tools -y`
 
