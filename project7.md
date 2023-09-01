@@ -34,7 +34,7 @@ It is important to know what storage solution is suitable for what use cases, fo
 
 - Mount lv-apps on /mnt/apps – To be used by webservers
 - Mount lv-logs on /mnt/logs – To be used by webserver logs
-- Mount lv-opt on /mnt/opt – To be used by Jenkins server in the next project (8)
+- Mount lv-opt on /mnt/opt – To be used by Jenkins server in the [next project](https://github.com/DanielAsikpo/Project-8)
 
 ![Images](./Images/Screenshot_4.png)
 
