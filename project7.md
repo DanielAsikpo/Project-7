@@ -90,8 +90,6 @@ Configure access to NFS for clients within the same subnet (example of Subnet CI
 
 6. Check which port is used by NFS and open it using Security Groups (add new Inbound Rule)
 
-`rpcinfo -p | grep nfs`
-
 ![Images](./Images/Screenshot_10.png)
 
 **Important note:** In order for NFS server to be accessible from your client, you must also open following ports: *TCP 111, UDP 111, UDP 2049*
@@ -186,7 +184,7 @@ setsebool -P httpd_execmem 1
 
 ![Images](./Images/Screenshot_15.png)
 
-To mount, use `sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/logss /var/log/httpd`
+To mount, use `sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/logs /var/log/httpd`
 
 ![Images](./Images/Screenshot_16.png)
 
@@ -222,6 +220,8 @@ Install **mysql-client**  `sudo yum install mysql -y`
 Apply tooling-db.sql script to your database using this command `mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql`
 
 ![Images](./Images/Screenshot_23.png)
+
+**Note:** If you get a timeout error after you input the password, go to the DB server and set bind-address to 0.0.0.0. Use the following command `sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf`. If error persist, open MySQL/Aurora port on the DB server's security group.
 
 Confirm if this worked in the DB-Server
 
